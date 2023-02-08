@@ -1,12 +1,15 @@
 import { addPlugin, createResolver, defineNuxtModule } from '@nuxt/kit'
+import type { PrimeVueConfiguration, PrimeVueLocaleAriaOptions, PrimeVueLocaleOptions, PrimeVueZIndexOptions } from './options'
 
-// Module options TypeScript interface definition
-export interface ModuleOptions {}
+export type { PrimeVueConfiguration, PrimeVueLocaleAriaOptions, PrimeVueLocaleOptions, PrimeVueZIndexOptions }
 
-export default defineNuxtModule<ModuleOptions>({
+const defaults: PrimeVueConfiguration = {}
+
+export default defineNuxtModule<PrimeVueConfiguration>({
   meta: {
     name: '@notkamui/nuxt-primevue',
     configKey: 'primevue',
+    defaults,
   },
   // Default configuration options of the Nuxt module
   defaults: {},
