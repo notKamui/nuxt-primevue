@@ -4,6 +4,8 @@ export interface PrimeVueConfiguration {
   locale?: PrimeVueLocaleOptions;
   filterMatchModeOptions?: any;
   zIndex?: PrimeVueZIndexOptions;
+  includeChart?: boolean;
+  includeEditor?: boolean;
 }
 
 export interface PrimeVueZIndexOptions {

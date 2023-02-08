@@ -14,7 +14,7 @@ import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
 export default defineNuxtPlugin(({ vueApp }) => {
   const runtimeConfig = useRuntimeConfig()
-  const config: PrimeVueConfiguration = runtimeConfig?.primevue?.config ?? {}
+  const config: PrimeVueConfiguration = runtimeConfig?.primevue ?? {}
 
   vueApp
     .use(PrimeVue, config)
