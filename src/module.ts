@@ -9,6 +9,9 @@ export default defineNuxtModule<PrimeVueConfiguration>({
   meta: {
     name: '@notkamui/nuxt-primevue',
     configKey: 'primevue',
+    compatibility: {
+      nuxt: '^3.0.0',
+    },
     defaults,
   },
   // Default configuration options of the Nuxt module

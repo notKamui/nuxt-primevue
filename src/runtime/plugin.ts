@@ -7,6 +7,7 @@ import FocusTrap from 'primevue/focustrap'
 
 import ConfirmationService from 'primevue/confirmationservice'
 import ToastService from 'primevue/toastservice'
+import DialogService from 'primevue/dialogservice'
 
 import type { PrimeVueConfiguration } from '../options'
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
@@ -24,4 +25,5 @@ export default defineNuxtPlugin(({ vueApp }) => {
     .directive('focus-trap', FocusTrap)
     .use(ConfirmationService)
     .use(ToastService)
+    .use(DialogService)
 })
