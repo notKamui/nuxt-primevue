@@ -1,4 +1,4 @@
-# Nuxt Primevue
+# Nuxt PrimeVue
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -14,7 +14,20 @@ Provides auto import of PrimeVue components and directives.
 
 ## Quick Setup
 
-1. Add `@notkamui/nuxt-primevue` dependency to your project
+1. Add `primevue` dependency to your project
+
+```bash
+# Using pnpm
+pnpm add -D primevue
+
+# Using yarn
+yarn add --dev primevue
+
+# Using npm
+npm install --save-dev primevue
+```
+
+2. Add `@notkamui/nuxt-primevue` dependency to your project
 
 ```bash
 # Using pnpm
@@ -27,17 +40,43 @@ yarn add --dev @notkamui/nuxt-primevue
 npm install --save-dev @notkamui/nuxt-primevue
 ```
 
-2. Add `@notkamui/nuxt-primevue` to the `modules` section of `nuxt.config.ts`
+3. Add `@notkamui/nuxt-primevue` to the `modules` section of `nuxt.config.ts`, along with the PrimeVue CSS files.
 
 ```js
 export default defineNuxtConfig({
+  css: [
+    'primevue/resources/themes/lara-light-blue/theme.css',
+    'primevue/resources/primevue.css',
+  ],
   modules: [
     '@notkamui/nuxt-primevue'
-  ]
+  ],
+  primevue: {
+    // PrimeVue configuration
+    // see https://primevue.org/setup,
+
+    // additional PrimeVue components to auto-import
+    includeChart: true, // default: false
+    includeEditor: true, // default: false
+  },
 })
 ```
 
-That's it! You can now use Primevue in your Nuxt app ✨
+That's it! You can now use PrimeVue in your Nuxt app with (almost) all the directives and components auto-imported ✨
+
+## Configuration
+
+There are two PrimeVue components that are not auto-imported by default:
+- `Chart`
+- `Editor`
+
+This is because they require additional dependencies to function (`chart.js` and `quill` respectively).
+
+To include them, set the `includeChart` and/or `includeEditor` options to `true` in the module configuration, after installing their dependencies.
+
+Moreover, the rest of the module configuration options are the exact same as the PrimeVue plugin's configuration options (and they are typed !).
+
+Please refer to the Configuration section of [this page](https://primevue.org/setup) for more information.
 
 ## Development
 
