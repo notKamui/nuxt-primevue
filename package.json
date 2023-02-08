@@ -43,7 +43,8 @@
     "taze": "taze major -I"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.1.2"
+    "@nuxt/kit": "^3.1.2",
+    "primevue": "^3.23.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.2",
