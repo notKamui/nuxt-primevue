@@ -38,7 +38,6 @@ const dataComponentNames = [
   'DataView',
   'DataViewLayoutOptions',
   'VirtualScroller',
-  'FullCalendar',
   'OrderList',
   'OrganizationChart',
   'Paginator',
@@ -135,16 +134,3 @@ export const componentNames = [
   ...mediaComponentNames,
   ...miscComponentNames,
 ].sort()
-
-export const globals = [
-  ['PrimeVue', 'primevue/config', 'default'],
-  ['PBadgeDirective', 'primevue/badgedirective', 'default'],
-  ['PRipple', 'primevue/ripple', 'default'],
-  ['PStyleClass', 'primevue/styleclass', 'default'],
-  ['PTooltip', 'primevue/tooltip', 'default'],
-  ['PFocusTrap', 'primevue/focustrap', 'default'],
-  ['PConfirmationService', 'primevue/confirmationservice', 'default'],
-  ['PToastService', 'primevue/toastservice', 'default'],
-  ['PDialogService', 'primevue/dialogservice', 'default'],
-  ['TerminalService', 'primevue/terminalservice', 'PTerminalService'],
-]
