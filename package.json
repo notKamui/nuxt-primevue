@@ -36,7 +36,8 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "release": "run-s lint prepack && changelogen --release && pnpm publish --access public && git push --follow-tags",
+    "release": "run-s lint prepack && pnpm publish --access public && git push --follow-tags",
+    "changelog": "changelogen --release",
     "lint": "eslint .",
     "taze": "taze major -I"
   },
