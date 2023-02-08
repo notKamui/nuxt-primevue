@@ -1,35 +1,35 @@
 {
   "name": "@notkamui/nuxt-primevue",
+  "type": "module",
   "version": "0.1.0",
   "description": "Nuxt module for PrimeVue",
   "author": {
     "name": "notKamui",
     "email": "teillard.jimmy@outlook.fr"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/notKamui/nuxt-primevue.git"
   },
-  "license": "MIT",
-  "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/types.d.ts",
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
-    }
-  },
-  "main": "./dist/module.cjs",
-  "types": "./dist/types.d.ts",
-  "files": [
-    "dist"
-  ],
   "keywords": [
     "nuxt",
     "nuxt-module",
     "vue3",
     "nuxt3",
     "nuxt-primevue"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "require": "./dist/module.cjs",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
   ],
   "scripts": {
     "prepack": "nuxt-module-build",
