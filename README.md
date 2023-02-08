@@ -1,56 +1,43 @@
-<!--
-Get your module up and running quickly.
-
-Find and replace all on all files (CMD+SHIFT+F):
-- Name: My Module
-- Package name: my-module
-- Description: My new Nuxt module
--->
-
-# My Module
+# Nuxt Primevue
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 
-> My new Nuxt module
+> Nuxt module for PrimeVue
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
 ## Features
 
-<!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+Provides auto import of PrimeVue components and directives.
 
 ## Quick Setup
 
-1. Add `my-module` dependency to your project
+1. Add `@notkamui/nuxt-primevue` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D my-module
+pnpm add -D @notkamui/nuxt-primevue
 
 # Using yarn
-yarn add --dev my-module
+yarn add --dev @notkamui/nuxt-primevue
 
 # Using npm
-npm install --save-dev my-module
+npm install --save-dev @notkamui/nuxt-primevue
 ```
 
-2. Add `my-module` to the `modules` section of `nuxt.config.ts`
+2. Add `@notkamui/nuxt-primevue` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
   modules: [
-    'my-module'
+    '@notkamui/nuxt-primevue'
   ]
 })
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+That's it! You can now use Primevue in your Nuxt app ✨
 
 ## Development
 
@@ -79,11 +66,11 @@ npm run release
 ```
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/my-module
+[npm-version-src]: https://img.shields.io/npm/v/@notkamui/nuxt-primevue/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/@notkamui/nuxt-primevue
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/my-module
+[npm-downloads-src]: https://img.shields.io/npm/dm/@notkamui/nuxt-primevue.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/@notkamui/nuxt-primevue
 
-[license-src]: https://img.shields.io/npm/l/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/my-module
+[license-src]: https://img.shields.io/npm/l/@notkamui/nuxt-primevue.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/@notkamui/nuxt-primevue
