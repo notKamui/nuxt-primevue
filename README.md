@@ -76,7 +76,7 @@ To include them, set the `includeChart` and/or `includeEditor` options to `true`
 
 Moreover, the rest of the module configuration options are the exact same as the PrimeVue plugin's configuration options (and they are typed !).
 
-Please refer to the Configuration section of [this page](https://primevue.org/setup) for more information.
+Please refer to the Configuration section of [this page](https://primevue.org/configuration) for more information.
 
 ## Development
 
