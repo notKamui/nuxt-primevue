@@ -1,7 +1,6 @@
-import path from 'node:path'
-import { addComponent, addPlugin, defineNuxtModule } from '@nuxt/kit'
+import { addComponent, addImports, addPlugin, createResolver, defineNuxtModule } from '@nuxt/kit'
 import type { PrimeVueConfiguration, PrimeVueLocaleAriaOptions, PrimeVueLocaleOptions, PrimeVueZIndexOptions } from './options'
-import { componentNames } from './runtime/autoimports'
+import { componentNames, composables } from './runtime/autoimports'
 
 export type { PrimeVueConfiguration, PrimeVueLocaleAriaOptions, PrimeVueLocaleOptions, PrimeVueZIndexOptions }
 
@@ -19,6 +18,10 @@ function registerComponents(components: string[]) {
   }))
 }
 
+function registerComposables(composables: { name: string; as: string; from: string }[]) {
+  composables.forEach(composable => addImports(composable))
+}
+
 export default defineNuxtModule<PrimeVueConfiguration>({
   meta: {
     name: '@notkamui/nuxt-primevue',
@@ -29,20 +32,21 @@ export default defineNuxtModule<PrimeVueConfiguration>({
   },
   defaults,
   setup(options, nuxt) {
-    const runtime = path.resolve(__dirname, 'runtime')
-    const plugin = path.resolve(__dirname, 'runtime/plugin')
+    const { resolve } = createResolver(import.meta.url)
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     nuxt.options.runtimeConfig.public.primevue = options
     nuxt.options.build.transpile.push('primevue')
-    nuxt.options.build.transpile.push(runtime)
+    nuxt.options.build.transpile.push(resolve('./runtime'))
 
-    addPlugin(plugin)
+    addPlugin(resolve('./runtime/plugin'))
 
     const { includeChart, includeEditor } = options
     registerComponents(componentNames
       .filter(name => name !== 'Chart' || includeChart)
       .filter(name => name !== 'Editor' || includeEditor))
+
+    registerComposables(composables)
   },
 })

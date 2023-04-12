@@ -1,7 +1,7 @@
 {
   "name": "@notkamui/nuxt-primevue",
   "type": "module",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Nuxt module for PrimeVue",
   "author": {
     "name": "notKamui",

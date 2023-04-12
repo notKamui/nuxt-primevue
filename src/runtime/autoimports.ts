@@ -134,3 +134,7 @@ export const componentNames = [
   ...mediaComponentNames,
   ...miscComponentNames,
 ].sort()
+
+export const composables = [
+  { name: 'useToast', as: 'useToast', from: 'primevue/usetoast' },
+]
