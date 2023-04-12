@@ -6,8 +6,6 @@
 
 > Nuxt module for PrimeVue
 
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
-
 ## Features
 
 Provides auto import of PrimeVue components and directives.
