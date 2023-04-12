@@ -9,7 +9,7 @@ import ConfirmationService from 'primevue/confirmationservice'
 import ToastService from 'primevue/toastservice'
 import DialogService from 'primevue/dialogservice'
 
-import { defineNuxtPlugin } from 'nuxt/app'
+import { defineNuxtPlugin, useRuntimeConfig } from 'nuxt/app'
 import type { PrimeVueConfiguration } from '../options'
 
 export default defineNuxtPlugin(({ vueApp }) => {
