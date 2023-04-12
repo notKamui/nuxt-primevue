@@ -10,20 +10,18 @@ import ToastService from 'primevue/toastservice'
 import DialogService from 'primevue/dialogservice'
 
 import { defineNuxtPlugin, useRuntimeConfig } from 'nuxt/app'
-import type { PrimeVueConfiguration } from '../options'
 
 export default defineNuxtPlugin(({ vueApp }) => {
   const runtimeConfig = useRuntimeConfig()
-  const config: PrimeVueConfiguration = runtimeConfig?.primevue ?? {}
+  const config = runtimeConfig?.public?.primevue ?? {}
 
-  vueApp
-    .use(PrimeVue, config)
-    .directive('badge', BadgeDirective)
-    .directive('ripple', Ripple)
-    .directive('style-class', StyleClass)
-    .directive('tooltip', Tooltip)
-    .directive('focus-trap', FocusTrap)
-    .use(ConfirmationService)
-    .use(ToastService)
-    .use(DialogService)
+  vueApp.use(PrimeVue, config)
+  vueApp.directive('badge', BadgeDirective)
+  vueApp.directive('ripple', Ripple)
+  vueApp.directive('style-class', StyleClass)
+  vueApp.directive('tooltip', Tooltip)
+  vueApp.directive('focus-trap', FocusTrap)
+  vueApp.use(DialogService)
+  vueApp.use(ConfirmationService)
+  vueApp.use(ToastService)
 })

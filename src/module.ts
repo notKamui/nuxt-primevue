@@ -7,6 +7,7 @@ export type { PrimeVueConfiguration, PrimeVueLocaleAriaOptions, PrimeVueLocaleOp
 const defaults: PrimeVueConfiguration = {
   includeChart: false,
   includeEditor: false,
+  ripple: true,
 }
 
 function registerComponents(components: string[]) {
@@ -34,11 +35,12 @@ export default defineNuxtModule<PrimeVueConfiguration>({
   setup(options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    nuxt.options.runtimeConfig.public.primevue = options
+    nuxt.options.runtimeConfig.public.primevue = options as typeof nuxt.options.runtimeConfig.public.primevue
+    nuxt.options.build.transpile.push('nuxt')
     nuxt.options.build.transpile.push('primevue')
     nuxt.options.build.transpile.push(resolve('./runtime'))
+    nuxt.options.build.transpile.push(resolve('./runtime/plugin'))
+    nuxt.options.build.transpile.push(resolve('./runtime/autoimports'))
 
     addPlugin(resolve('./runtime/plugin'))
 
