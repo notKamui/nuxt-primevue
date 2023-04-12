@@ -30,7 +30,7 @@ export default defineNuxtModule<PrimeVueConfiguration>({
   defaults,
   setup(options, nuxt) {
     const runtime = path.resolve(__dirname, 'runtime')
-    const plugin = path.resolve(__dirname, 'runtime/plugin.ts')
+    const plugin = path.resolve(__dirname, 'runtime/plugin')
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
