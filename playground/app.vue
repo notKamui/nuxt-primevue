@@ -1,6 +1,17 @@
+<script setup lang="ts">
+import { useToast } from 'primevue/usetoast'
+
+const toast = useToast()
+
+function showSuccess() {
+  toast.add({ severity: 'success', summary: 'Success', detail: 'Message Content', life: 3000 })
+}
+</script>
+
 <template>
   <div>
-    <p-button v-ripple label="Hey" icon="i-check" icon-pos="left" />
+    <PToast />
+    <p-button v-ripple label="Hey" icon="i-check" icon-pos="left" @click="showSuccess" />
   </div>
 </template>
 
