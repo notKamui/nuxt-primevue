@@ -5,10 +5,6 @@ import StyleClass from 'primevue/styleclass'
 import Tooltip from 'primevue/tooltip'
 import FocusTrap from 'primevue/focustrap'
 
-import ConfirmationService from 'primevue/confirmationservice'
-import ToastService from 'primevue/toastservice'
-import DialogService from 'primevue/dialogservice'
-
 import { defineNuxtPlugin, useRuntimeConfig } from 'nuxt/app'
 
 export default defineNuxtPlugin(({ vueApp }) => {
@@ -21,7 +17,4 @@ export default defineNuxtPlugin(({ vueApp }) => {
   vueApp.directive('style-class', StyleClass)
   vueApp.directive('tooltip', Tooltip)
   vueApp.directive('focus-trap', FocusTrap)
-  vueApp.use(DialogService)
-  vueApp.use(ConfirmationService)
-  vueApp.use(ToastService)
 })
