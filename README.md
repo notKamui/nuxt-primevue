@@ -6,8 +6,6 @@
 
 > Nuxt module for PrimeVue
 
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
-
 ## Features
 
 Provides auto import of PrimeVue components and directives.
@@ -40,7 +38,21 @@ yarn add --dev @notkamui/nuxt-primevue
 npm install --save-dev @notkamui/nuxt-primevue
 ```
 
-3. Add `@notkamui/nuxt-primevue` to the `modules` section of `nuxt.config.ts`, along with the PrimeVue CSS files.
+3. As of now, you need to create a Nuxt plugin to include the services provided by Primevue. Create a `primevue.ts` file in the `plugins` folder :
+
+```js
+import ToastService from 'primevue/toastservice'
+import ConfirmationService from 'primevue/confirmationservice'
+import DialogService from 'primevue/dialogservice'
+
+export default defineNuxtPlugin(({ vueApp }) => {
+  vueApp.use(ToastService)
+  vueApp.use(ConfirmationService)
+  vueApp.use(DialogService)
+})
+```
+
+4. Add `@notkamui/nuxt-primevue` to the `modules` section of `nuxt.config.ts`, along with the PrimeVue CSS files.
 
 ```js
 export default defineNuxtConfig({
