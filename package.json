@@ -1,7 +1,7 @@
 {
   "name": "@notkamui/nuxt-primevue",
   "type": "module",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Nuxt module for PrimeVue",
   "author": {
     "name": "notKamui",
@@ -40,20 +40,22 @@
     "lint": "eslint .",
     "taze": "taze major -I"
   },
+  "peerDependencies": {
+    "primevue": "^3.0.0"
+  },
   "dependencies": {
-    "@nuxt/kit": "^3.4.1",
-    "primevue": "^3.26.1"
+    "@nuxt/kit": "^3.5.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.4",
-    "@nuxt/module-builder": "^0.3.0",
-    "@nuxt/schema": "^3.4.1",
-    "@nuxt/test-utils": "^3.4.1",
-    "@types/node": "^18.15.11",
-    "consola": "^3.0.2",
-    "eslint": "^8.38.0",
+    "@antfu/eslint-config": "^0.39.5",
+    "@nuxt/module-builder": "^0.4.0",
+    "@nuxt/schema": "^3.5.3",
+    "@nuxt/test-utils": "^3.5.3",
+    "@types/node": "^18.16.18",
+    "consola": "^3.1.0",
+    "eslint": "^8.43.0",
     "npm-run-all": "^4.1.5",
-    "nuxt": "^3.4.1",
-    "taze": "^0.9.1"
+    "nuxt": "^3.5.3",
+    "taze": "^0.10.2"
   }
 }
