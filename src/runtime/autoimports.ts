@@ -137,4 +137,7 @@ export const componentNames = [
 
 export const composables = [
   { name: 'useToast', as: 'useToast', from: 'primevue/usetoast' },
+  { name: 'useConfirm', as: 'useConfirm', from: 'primevue/useconfirm' },
+  { name: 'useDialog', as: 'useDialog', from: 'primevue/usedialog' },
+  { name: 'usePrimeVue', as: 'usePrimeVue', from: 'primevue/config' },
 ]
