@@ -16,26 +16,26 @@ Provides auto import of PrimeVue components and directives.
 
 ```bash
 # Using pnpm
-pnpm add -D primevue
+pnpm add primevue
 
 # Using yarn
-yarn add --dev primevue
+yarn add primevue
 
 # Using npm
-npm install --save-dev primevue
+npm install primevue
 ```
 
 2. Add `@notkamui/nuxt-primevue` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D @notkamui/nuxt-primevue
+pnpm add @notkamui/nuxt-primevue
 
 # Using yarn
-yarn add --dev @notkamui/nuxt-primevue
+yarn add @notkamui/nuxt-primevue
 
 # Using npm
-npm install --save-dev @notkamui/nuxt-primevue
+npm install @notkamui/nuxt-primevue
 ```
 
 3. As of now, you need to create a Nuxt plugin to include the services provided by Primevue. Create a `primevue.ts` file in the `plugins` folder :
@@ -74,7 +74,7 @@ export default defineNuxtConfig({
 })
 ```
 
-That's it! You can now use PrimeVue in your Nuxt app with (almost) all the directives and components auto-imported ✨
+That's it! You can now use PrimeVue in your Nuxt app with (almost) all the directives and components auto-imported ✨ (Note that components are prefixed with a `P`, e.g. `PButton` instead of `Button`)
 
 ## Configuration
 
