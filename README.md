@@ -1,5 +1,9 @@
 # Nuxt PrimeVue
 
+## ⚠️⚠️Warning⚠️⚠️
+
+**This plugin should not be used anymore since Primevue now has an official Nuxt plugin**
+
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
